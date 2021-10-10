@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fuente open sans y EB garamond para títulos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;700;800&family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+    <title>Alan Pirotta</title>
+</head>
+<body>
+    <header id="header">
+    </header>
+    <section class="contact">
+        <h2>Contáctame!</h2>
+    <form class="contact_form" id="contact_form" method="get">
+        <label for="name">Nombre y apellido:</label>
+        <label for="mail">Mail:</label>
+        <input type="text" id="name" name="name" >
+        <input type="email" id="mail" name="mail">
+        <label for="subject">Asunto:</label>
+        <label for="subject_type">Tema:</label>
+        <input type="text" id="subject" name="subject">
+        <div class="contact_form-radio">
+            <input type="radio" name="subject_type" id="work"><label for="work">laboral</label>
+            <input type="radio" name="subject_type" id="personal"><label for="personal">personal</label>
+        </div>
+        <label class="contact_form-message" for="message" id="textarea_title">Mensaje:</label>
+        <textarea class="contact_form-message" name="message" id="mensaje"></textarea>
+        <input class="contact_form-button" id="contact_form_button" type="submit">
+    </form>
+
+    <script src="validar_form.js">
+    </script>
+
+</section>
+<footer id="footer">
+</footer>    
+<script src="esenciales.js"></script>
+</body>
+</html>
