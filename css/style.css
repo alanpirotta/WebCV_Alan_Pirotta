@@ -130,7 +130,7 @@ footer{
             background-color: white;
             border-radius: 6px;
             display: grid;
-            grid-template-rows: 85px 1fr 5fr;
+            grid-template-rows: 95px 1fr 5fr;
             align-items: center;
         }
 
@@ -140,7 +140,7 @@ footer{
             
             .introduction_text h1, .introduction_text-buttons{
                 text-align: center;
-                margin: 10px;
+                margin: 15px;
             }
 
             .introduction_text h1{
