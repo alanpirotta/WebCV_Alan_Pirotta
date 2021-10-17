@@ -30,7 +30,7 @@ document.getElementById("header").innerHTML=
     `
 
 document.getElementById("footer").innerHTML = `
-        <h3 class="footer_logo footer_start">
+        <h3 class="footer_logo footer_start" id="name">
             Alan Pirotta
         </h3>
         <h4 class="footer_title">

@@ -851,8 +851,17 @@ footer{
         column-gap: 5px;
     }
     .footer_start{
-        font-size: x-small;
+        font-size: medium;
     }
+    
+    #date{
+        display: none;
+    }
+
+    #name{
+        grid-row: 1 / span 2;
+    }
+
 
     
     /*Cambiar ubicación de foto y texto introductorio a vertical*/
