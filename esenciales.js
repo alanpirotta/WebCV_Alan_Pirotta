@@ -33,21 +33,21 @@ document.getElementById("footer").innerHTML = `
         <h3 class="footer_logo footer_start" id="myName">
             Alan Pirotta
         </h3>
-        <h4 class="footer_title">
-            Whatsapp
+        <h4 class="footer_title" id="whatsapp">
+            Whatsapp:
         </h4>
-        <h4 class="footer_title">
-            Escríbeme
+        <h4 class="footer_title" id="mail_title">
+            Mail:
         </h4>
-        <h4 class="footer_title footer_end">
-            Sígueme
+        <h4 class="footer_title footer_end" id="social_title">
+            Redes:
         </h4>
         <h4 class="footer_title footer_start" id="date">
             Octubre 2021
         </h4>
-        <a class="footer_link" href="https://wa.me/541159659368" target="_blank">(54)11 5965-9368</a>
-        <a class="footer_link" href="mailto:alanupirotta@gmail.com">alanupirotta@gmail.com</a>
-        <div class="footer_link footer_end">
+        <a class="footer_link" id="whatsapp_number" href="https://wa.me/541159659368" target="_blank">(54)11 5965-9368</a>
+        <a class="footer_link" id="mail" href="mailto:alanupirotta@gmail.com">alanupirotta@gmail.com</a>
+        <div class="footer_link footer_end" id="social">
             <a href="https://www.linkedin.com/in/alan-uriel-pirotta/" class="fa fa-linkedin"  target="_blank"></a>
             <a href="https://github.com/alanpirotta" class="fa fa-github"  target="_blank"></a>
         </div>

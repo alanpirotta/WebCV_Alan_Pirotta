@@ -5,7 +5,8 @@
 }
 
 h1, h2, h3, h4, h5{
-    font-family: 'EB Garamond', serif;
+    /* font-family: 'EB Garamond', serif; */
+    font-family: 'Montserrat', sans-serif;;
 }
 
 body{
@@ -146,7 +147,7 @@ footer{
         left: 55%;
         width: 45%;
         height: 100%;
-        background-color: rgb(228, 201, 151);
+        background-color: #eaeaea;
         z-index: -10;
     }
 
@@ -205,7 +206,7 @@ footer{
             
 
         .introduction_photo{
-            background-color: rgb(235, 215, 179);
+            background-color: #f2f2f2;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -224,7 +225,7 @@ footer{
 
 /* Fondo de las páginas menos index */
 .contact, .knowledge, .experience{
-    background-color: rgb(228, 201, 151);
+    background-color: #eaeaea;
 }
 
 
@@ -759,9 +760,9 @@ footer{
             margin: 10px;
         }
 
-        aside #separator{
-            margin: 10px auto;
-            grid-column: 1 / span 2;
+        aside #separator, aside #separator_2{
+            /* margin: 10px auto;
+            grid-column: 1 / span 2; */
             display: none;
         }
    
@@ -792,22 +793,31 @@ footer{
         }
 
     .knowledge aside{
-    grid-template-rows: 40px auto 15px 35px auto;
+    align-items: flex-start;
+    grid-template-rows: 40px auto 40px auto;
     grid-template-columns: auto auto;
-    grid-template-areas: "title1    title2" 
-                            "text1     text2"
-                            "separator_2 text2"
-                            "title3    text2"
-                            "text3     text2";
+    grid-template-areas: "title1      title2" 
+                         "text1       text2"
+                         "title3      text2"
+                         "text3       text3";
     
-                        } 
+    } 
 
-    #separator_2{
-        margin: auto;
+    #languages-list{
+        grid-column: 1 / span 2;
+    }
+
+    #languages-list span{
+        width: 49%;
+        display: inline-block;
+    }
+    
+    .courses{
+        margin-bottom: 10px;
     }
 }    
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 800px){
     /* Cambia el menú nav a uno desplegable */
     .hamburger{
         display: block;
@@ -825,7 +835,7 @@ footer{
         }
         
         .nav_menu{
-            position: fixed;
+            position: absolute;
             right: -100%;
             top: 64px;
             gap: 0;
@@ -856,17 +866,7 @@ footer{
     .footer_start{
         font-size: medium;
     }
-    
-    #date{
-        display: none;
-    }
-
-    #myName{
-        grid-row: 1 / span 2;
-    }
-
-
-    
+       
     /*Cambiar ubicación de foto y texto introductorio a vertical*/
     .introduction{
         margin-top: 10px;
@@ -879,4 +879,46 @@ footer{
         .introduction_photo{
             min-width: 80%;
         }
+}
+
+@media only screen and (max-width: 500px){
+
+    footer{
+        grid-template-columns: auto auto;
+        grid-template-areas: "name date" "whatsapp whatsapp_number" "mail_title mail" "social_title social";
+    }
+    
+    #myName{
+        grid-area: name;
+    }
+    #date{
+        grid-area: date;
+    }
+    #whatsapp{
+        grid-area: whatsapp;
+    }
+    #whatsapp_number{
+        grid-area: whatsapp_number;
+    }
+    #mail_title{
+        grid-area: mail_title;
+    }
+    #mail{
+        grid-area: mail;
+    }
+    #social_title{
+        grid-area: social_title;
+    }
+    #social{
+        grid-area: social;
+    }
+
+    #myName, #whatsapp, #mail_title, #social_title{
+        text-align: right;
+    }
+
+    #date, #whatsapp_number, #mail, #social{
+        text-align: left;
+    }
+
 }
