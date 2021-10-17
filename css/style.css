@@ -131,7 +131,6 @@ footer{
 /* Display flex para dividir header, footer y cuerpo principal */
 .contact, .knowledge, .experience, .about_me{
     flex: 3 1 auto; /* Para que sea la sección ppal en tamaño */
-    z-index: -100;
 }
 
 /*Cuerpo de la página inicial*/
@@ -284,7 +283,7 @@ footer{
         }
 
             .contact_form-radio label{
-                padding: 0 20px 0px 5px;
+                padding: 0 5px 0px 5px;
             }
 
             .contact_form-radio input[type="radio"]{
@@ -828,7 +827,7 @@ footer{
         .nav_menu{
             position: fixed;
             right: -100%;
-            top: 70px;
+            top: 64px;
             gap: 0;
             flex-direction: column;
             background-color: white;
@@ -845,6 +844,10 @@ footer{
             right: 0;
         } 
     
+        .about_me, .experience, .knowledge{
+            z-index: -1;
+        }
+
     /*Cambia tamaños para que se siga viendo todo correctamente*/
     footer{
         grid-template-columns: 5fr auto auto auto;
