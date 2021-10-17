@@ -739,11 +739,9 @@ footer{
         /*configuración de barra lateral */
         .experience aside{
             margin: 10px 20px;
-            grid-template-rows: 40px auto;
-            grid-template-columns: auto auto;
-            grid-template-areas: "summary_title reference_title"
-                                 "summary       reference"
-                                 "separator     separator";
+            grid-template-rows: 40px auto 25px 40px auto;
+            grid-template-columns: auto;
+            grid-template-areas: "summary_title" "summary" "separator" "reference_title" "reference";
             align-items: flex-start;
             row-gap: 0;
             column-gap: 10px;
