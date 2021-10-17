@@ -28,6 +28,19 @@ body{
         position: relative;
     }
 
+    aside ul{
+        list-style: none;
+    }
+
+    aside ul li::before, .academic p::before, .courses p::before{
+        content: "\2022";  
+        color: rgb(100, 100, 241); 
+        font-weight: bold; 
+        display: inline-block; 
+        width: 1em; 
+        margin-left: -1em; 
+    }
+
 /* ------------------------------------------- */
 
 /* Encabezado */
@@ -62,12 +75,12 @@ body{
         }
 
             .nav_link:hover{
-                color: rgb(190, 165, 118);
+                color: #eaeaea;
                 font-weight: bold;
             }
 
         .pag_activa{
-            color: rgb(190, 165, 118);
+            color: #666666;
         }
 
     .hamburger{
@@ -196,7 +209,7 @@ footer{
                 color: white;
                 font-weight: bold;
                 font-size: large;
-                padding: 10px;
+                padding: 10px 20px;
                 border: none;
                 border-radius: 100px;
                 cursor: pointer;
@@ -260,8 +273,6 @@ footer{
         row-gap: 5px;
         align-items: center;
         text-align: start;
-        
-
     }
 
         .contact_form input[type="text"], .contact_form input[type="email"], .contact_form textarea{
@@ -326,10 +337,6 @@ footer{
             height: 100px;
         }
 
-        .contact_form-submit{
-            grid-column-start: 2;
-        }
-        
         .contact_form input[type="submit"]{
             width: 150px;
             background-color: rgb(100, 100, 241);
@@ -340,8 +347,9 @@ footer{
             border: none;
             border-radius: 100px;
             cursor: pointer;
-            justify-self: end;
+            justify-self: center;
             margin-right: 20px;
+            grid-column: 1 / span 2;
         }
 
         input[type="submit"]:hover{
@@ -362,7 +370,7 @@ footer{
 }
     
     .experience aside, .timeline{
-        height: 80%;
+        height: 90%;
     }
 
     /*configuración de barra lateral */
@@ -604,6 +612,10 @@ footer{
         margin: 5px 0 10px 15px;
     }
 
+    .academic p, .courses p{
+        margin-left: 15px;
+    }
+
     /* Barras de progreso de conocimiento */
     .progress{
 
@@ -649,7 +661,7 @@ footer{
     
         /*configuración de barra lateral */
         .experience aside{
-            grid-template-rows: 70px auto 200px 40px auto;
+            grid-template-rows: 40px auto 90px 40px auto;
             row-gap: 10px;
             padding-top: 20px;
             margin: 10px 10px;
@@ -772,7 +784,7 @@ footer{
 
             .experience_introduction .reference:after{
                 content: 'Paraguay 3014 - CABA';
-                margin-left: 50px;
+                margin-left: 30px;
             }
 
         .timeline{
@@ -789,12 +801,12 @@ footer{
     }
 
         .studies:nth-child(1) {
-            order: 2;
+            order: 3;
         }
 
     .knowledge aside{
     align-items: flex-start;
-    grid-template-rows: 40px auto 40px auto;
+    grid-template-rows: 50px auto 40px auto;
     grid-template-columns: auto auto;
     grid-template-areas: "title1      title2" 
                          "text1       text2"
@@ -885,11 +897,11 @@ footer{
 
     footer{
         grid-template-columns: auto auto;
-        grid-template-areas: "name date" "whatsapp whatsapp_number" "mail_title mail" "social_title social";
+        grid-template-areas: "myName date" "whatsapp whatsapp_number" "mail_title myMail" "social_title social";
     }
     
     #myName{
-        grid-area: name;
+        grid-area: myName;
     }
     #date{
         grid-area: date;
@@ -903,8 +915,8 @@ footer{
     #mail_title{
         grid-area: mail_title;
     }
-    #mail{
-        grid-area: mail;
+    #myMail{
+        grid-area: myMail;
     }
     #social_title{
         grid-area: social_title;
@@ -917,8 +929,29 @@ footer{
         text-align: right;
     }
 
-    #date, #whatsapp_number, #mail, #social{
+    #date, #whatsapp_number, #myMail, #social{
         text-align: left;
+    }
+
+    .contact_form-radio label{
+        font-size: small;
+    }
+
+    .contact_form-radio, .contact_form input[type="text"], .contact_form input[type="email"], .contact_form textarea{
+        margin-left: 0;
+
+    }
+
+    .contact_form input[type="text"], .contact_form input[type="email"], .contact_form textarea{
+        height: 20px;
+    }
+
+    #coordinador_sicon, #coordinador_general{
+        margin-top: 10px;
+    }
+
+    #analista::after{
+        left: 104%;
     }
 
 }
