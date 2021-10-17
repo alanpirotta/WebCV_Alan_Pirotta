@@ -858,7 +858,7 @@ footer{
         display: none;
     }
 
-    #name{
+    #myName{
         grid-row: 1 / span 2;
     }
 
