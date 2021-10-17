@@ -30,30 +30,59 @@ body{
 /* ------------------------------------------- */
 
 /* Encabezado */
-header{
-    padding: 0 2vw;
-    background-color: white;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-between;
 
+.nav_bar{
+    /* min-height: 70px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
 }
-    /* Menú de páginas */
-    .nav, #logo{
-        text-decoration: none;
-        padding: 3vh 5px;
-        color: black;
+
+#logo{
+    font-size: 1.1rem;
+}
+
+.nav_menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+    .nav_item{
+        list-style: none;
     }
-        
-        .nav:hover{
-            color: rgb(190, 165, 118);
-            font-weight: bold;
+    
+        .nav_link, #logo{
+            text-decoration: none;
+            padding: 3vh 5px;
+            color: black;
+            transition: 0.7s ease;
         }
 
-    .pag_activa{
-        color: rgb(190, 165, 118);
+            .nav_link:hover{
+                color: rgb(190, 165, 118);
+                font-weight: bold;
+            }
+
+        .pag_activa{
+            color: rgb(190, 165, 118);
+        }
+
+    .hamburger{
+        display: none;
+        cursor: pointer;
     }
+
+        .bar{
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            background-color: black;
+        }
 
 /* ------------------------------------------- */
 
@@ -102,6 +131,7 @@ footer{
 /* Display flex para dividir header, footer y cuerpo principal */
 .contact, .knowledge, .experience, .about_me{
     flex: 3 1 auto; /* Para que sea la sección ppal en tamaño */
+    z-index: -100;
 }
 
 /*Cuerpo de la página inicial*/
@@ -781,6 +811,42 @@ footer{
 }    
 
 @media only screen and (max-width: 700px){
+    /* Cambia el menú nav a uno desplegable */
+    .hamburger{
+        display: block;
+        z-index: 100;
+      }
+    
+        .hamburger.active .bar:nth-child(2){
+            opacity: 0;
+        }
+        .hamburger.active .bar:nth-child(1){
+            transform: translateY(8px) rotate(45deg);
+        }
+        .hamburger.active .bar:nth-child(3){
+            transform: translateY(-8px) rotate(-45deg);
+        }
+        
+        .nav_menu{
+            position: fixed;
+            right: -100%;
+            top: 70px;
+            gap: 0;
+            flex-direction: column;
+            background-color: white;
+            width: 30%;
+            text-align: center;
+            transition: 0.3s;
+        }
+        
+        .nav_item{
+            margin: 16px 0;
+        }
+        
+        .nav_menu.active{
+            right: 0;
+        } 
+    
     /*Cambia tamaños para que se siga viendo todo correctamente*/
     footer{
         grid-template-columns: 5fr auto auto auto;

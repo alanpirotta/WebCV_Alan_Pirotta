@@ -12,14 +12,20 @@ if (document.URL.includes("index.html")) {
 
 document.getElementById("header").innerHTML=
     `
-    <div>
-        <a id="logo" href="index.html"><h2>Alan Pirotta</h2></a>  <!--logo de mi nombre, más grande y a la izq-->
-    </div>
-        <nav>
-            <a class="nav ${pag_1}" href="index.html">SOBRE MI</a>
-            <a class="nav ${pag_2}" href="experiencia_laboral.html">EXPERIENCIA LABORAL</a>
-            <a class="nav ${pag_3}" href="conocimientos.html">CONOCIMIENTOS</a>
-            <a class="nav ${pag_4}" href="contacto.html">CONTACTO</a>
+    <nav class="nav_bar">
+            <a id="logo" href="index.html"><h2>Alan Pirotta</h2></a>  <!--logo de mi nombre, más grande y a la izq-->
+            <ul class="nav_menu">
+            <li class="nav_item"> <a class="nav_link ${pag_1}" href="index.html">SOBRE MI</a></li>
+            <li class="nav_item"> <a class="nav_link ${pag_2}" href="experiencia_laboral.html">EXPERIENCIA LABORAL</a></li>
+            <li class="nav_item"> <a class="nav_link ${pag_3}" href="conocimientos.html">CONOCIMIENTOS</a></li>
+            <li class="nav_item"> <a class="nav_link ${pag_4}" href="contacto.html">CONTACTO</a></li>
+            </ul>
+            <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
         </nav>
     `
 
@@ -46,3 +52,16 @@ document.getElementById("footer").innerHTML = `
             <a href="https://github.com/alanpirotta" class="fa fa-github"  target="_blank"></a>
         </div>
         `
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav_menu");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav_link").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}))
