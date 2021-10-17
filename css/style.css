@@ -18,7 +18,7 @@ body{
 }
 
     /* línea separadora visual de dos títulos */
-    #separator{
+    #separator, #separator_2{
         background-color: rgb(100, 100, 241);
         width: 70px;
         padding: 2px;
@@ -26,6 +26,8 @@ body{
         margin: 10px 10px;
         position: relative;
     }
+
+/* ------------------------------------------- */
 
 /* Encabezado */
 header{
@@ -53,6 +55,8 @@ header{
         color: rgb(190, 165, 118);
     }
 
+/* ------------------------------------------- */
+
 /* pie de página */
 footer{
     padding: 20px 0;
@@ -65,11 +69,14 @@ footer{
     column-gap: 20px;
     row-gap: 5px;
 }
+
+    /* Adaptar la primer columna */
     .footer_start{
         padding: 0 0 0 2vw;
         text-align: left;
     }
 
+    /* Adaptar la última columna */
     .footer_end{
         padding: 0 2vw 0 0;
     }
@@ -90,8 +97,10 @@ footer{
         color: rgb(190, 165, 118);
     }
 
+/* ------------------------------------------- */
+
 /* Display flex para dividir header, footer y cuerpo principal */
-.contact, .studies, .experience, .about_me{
+.contact, .knowledge, .experience, .about_me{
     flex: 3 1 auto; /* Para que sea la sección ppal en tamaño */
 }
 
@@ -182,8 +191,9 @@ footer{
                 padding: 20px 10px;
             }
 
+/* ------------------------------------------- */
 
-    /* Fondo de las páginas menos index */
+/* Fondo de las páginas menos index */
 .contact, .knowledge, .experience{
     background-color: rgb(228, 201, 151);
 }
@@ -308,11 +318,17 @@ footer{
             background-color: rgb(233, 60, 60);
         }
 
-.experience{
+/* ------------------------------------------- */
+
+/* Configuración de la página experiencias laborales e inicio de conocimientos */
+.experience, .knowledge{
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 320px auto;
     justify-content: center;
+}
+
+.experience{
+    grid-template-columns: 340px auto;
 }
     
     .experience aside, .timeline{
@@ -320,15 +336,18 @@ footer{
     }
 
     /*configuración de barra lateral */
-    .experience aside{
+    aside{
         background-color: white;
         position: relative;
         margin: auto;
-        margin-right: 0;
         border-radius: 6px;
         display: grid;
-        grid-template-rows: 40px 12fr 25px 40px 10fr;
         align-items: center;
+    }
+
+    .experience aside{
+        margin-right: 0;
+        grid-template-rows: 40px 12fr 25px 40px 10fr;
         grid-template-areas: "summary_title" "summary" "separator" "reference_title" "reference";
     }
 
@@ -349,26 +368,30 @@ footer{
         grid-area: reference;
     }
 
-    .experiencie aside #separator{
+    .experience aside #separator{
         grid-area: separator;
     }
 
         /*arreglos de caja leves*/
-        .experience aside h3{
+        aside h3{
             padding: 10px;
         }
 
-        .experience aside p, .experience_introduction iframe, .experience aside ul{
-            padding: 0 10px;
+        aside p, .experience_introduction iframe, aside ul{
+            padding: 10px 10px;
         }
 
-        .experience aside ul li{
+        aside ul li{
             margin-left: 20px;
             padding: 5px;
         }
 
         .experience_introduction iframe{
             margin: 0 auto;
+        }
+
+        .experience_introduction ul li a{
+            padding: 5px;
         }
 
     /*contenedor de la timeline y cada experiencia*/
@@ -395,15 +418,18 @@ footer{
         }
 
     /* Conenedor de cada experiencia*/
-    .container {
-        padding: 5px 10px;
+    .container, .studies{
         position: relative;
-        height: 50%;
         box-sizing: border-box;
         display: grid;
+    } 
+
+    .container{
+        padding: 5px 10px;
+        height: 50%;
         grid-template-columns: 30% 40% 5fr; 
         grid-template-rows: 100%;
-    } 
+    }
 
         .container_second{
             margin-top: 20px;
@@ -411,8 +437,8 @@ footer{
             grid-template-columns: 30% 25% 5fr 1fr;
         }
 
-    /* Las experiencias en si mismas */
-    .content {
+    /* Las experiencias en si mismas y los tipos de estudios*/
+    .content, .academic, .courses{
         padding: 10px 15px;
         margin: 0 10px;
         background-color: white;
@@ -420,12 +446,15 @@ footer{
         border-radius: 6px;
         box-sizing: border-box;
         display: grid;
+    }
+
+    .content{
         grid-template-rows: 25px 25px 1fr 3fr;
         align-items: center;
         row-gap: 5px;
         height: fit-content;
     }
-    
+
         .content_first{
             align-self: flex-end;
             margin-bottom: 10px;
@@ -433,6 +462,10 @@ footer{
         
         .content_second{
             margin-top: 10px;
+        }
+
+        #responsable_area{
+            grid-template-rows: 25px 25px 1fr 2fr;
         }
     /* Los señaladores de la timeline */
         .content::after {
@@ -474,18 +507,122 @@ footer{
                 border-top-left-radius: 0px;
             }
 
+/* ------------------------------------------- */
+
+/* diferencias de configuración de la página conocimientos */
+.knowledge{
+    grid-template-columns: auto 320px;
+}
+            
+    .knowledge aside{
+        margin: 10px;
+        padding: 10px;
+        height: max-content;
+        grid-template-rows: 35px auto 15px 35px auto 15px 35px auto;
+        grid-template-areas: "title1" "text1" "separator" "title2" "text2" "separator2" "title3" "text3";
+    }    
+    
+    /* asignación de nombres a las celdas */
+    #hard_skills{
+        grid-area: title1;
+    }
+    
+    #hard_skills-list{
+        grid-area: text1;
+    }
+    
+    .knowledge aside #separator{
+        grid-area: separator;
+    }
+
+    #soft_skills{
+        grid-area: title2;
+    }
+    
+    #soft_skills-list{
+        grid-area: text2;
+    }
+    
+    .knowledge aside #separator_22{
+        grid-area: separator2;
+    }
+    
+    #languages{
+        grid-area: title3;
+    }
+    
+    #languages-list{
+        grid-area: text3;
+    }
+
+    /*arreglos de caja leves*/
+    
+    .knowledge aside ul li{
+        padding: 0px 5px;
+    }
+
+    .studies{
+        height: 95%;
+        grid-template-columns: auto; 
+        row-gap: 10px;
+        margin: 10px;
+        padding-top: 0;
+    }
+
+    .studies span{
+        display: block;
+        margin: 5px 0 10px 15px;
+    }
+
+    /* Barras de progreso de conocimiento */
+    .progress{
+
+        height: 10px;
+        width: 100%;
+        border: 1px solid black;
+    }
+
+    .progress>*{
+        height: 10px;
+        background-color: rgb(100, 100, 241);
+        z-index: 1;
+    }
+
+        .excel{
+            width: 80%;
+        }
+
+        .html, .css{
+            width: 25%;
+        }
+        
+        .java, .js{
+            width: 15%;
+        }
+
+        .spanish{
+            width: 100%;
+        }
+
+        .english{
+            width: 60%;
+        }
+
+
+/* ------------------------------------------- */
+
 @media screen and (max-width: 1200px){
     
     .experience aside, .timeline{
-        height: 100%;
+        height: max-content;
     }
     
         /*configuración de barra lateral */
         .experience aside{
-            grid-template-rows: 40px auto 25px 40px auto 1fr;
+            grid-template-rows: 70px auto 200px 40px auto;
             row-gap: 10px;
-            border-radius: 0;
             padding-top: 20px;
+            margin: 10px 10px;
         }
 
         /*contenedor de la timeline y cada experiencia*/
@@ -558,18 +695,21 @@ footer{
                     left: 101.5%;
                     top: 10%;
                 }
+
+    .knowledge aside{
+        grid-template-rows: 40px auto 25px 40px auto 25px 40px auto;
+    }   
 }
 
 @media only screen and (max-width: 900px){
-    .experience{
+    .experience, .knowledge{
         grid-template-columns: auto;
-        justify-content: center;
     }
     
         /*configuración de barra lateral */
         .experience aside{
-            background-color: rgb(228, 201, 151);
-            grid-template-rows: 40px auto 25px;
+            margin: 10px 20px;
+            grid-template-rows: 40px auto;
             grid-template-columns: auto auto;
             grid-template-areas: "summary_title reference_title"
                                  "summary       reference"
@@ -577,8 +717,14 @@ footer{
             align-items: flex-start;
             row-gap: 0;
             column-gap: 10px;
+            height: 100%;
+            padding-top: 0;
         }
-    
+
+        aside{
+            padding-top: 0;
+        }
+
         .summary_title, .reference_title, .summary, .reference{
             background-color: white;
             border-radius: 6px;
@@ -586,7 +732,7 @@ footer{
             margin: 10px;
         }
 
-        .experience aside #separator{
+        aside #separator{
             margin: 10px auto;
             grid-column: 1 / span 2;
             display: none;
@@ -609,9 +755,32 @@ footer{
             border-radius: 6px;
             top: 20px;
         }
+
+    .studies{
+        margin: 0;
+    }
+
+        .studies:nth-child(1) {
+            order: 2;
+        }
+
+    .knowledge aside{
+    grid-template-rows: 40px auto 15px 35px auto;
+    grid-template-columns: auto auto;
+    grid-template-areas: "title1    title2" 
+                            "text1     text2"
+                            "separator_2 text2"
+                            "title3    text2"
+                            "text3     text2";
+    
+                        } 
+
+    #separator_2{
+        margin: auto;
+    }
 }    
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 700px){
     /*Cambia tamaños para que se siga viendo todo correctamente*/
     footer{
         grid-template-columns: 5fr auto auto auto;
@@ -622,12 +791,15 @@ footer{
     }
     
     /*Cambiar ubicación de foto y texto introductorio a vertical*/
-    .introduccion{
-        margin-top: 3vh;
+    .introduction{
+        margin-top: 10px;
         flex-direction: column-reverse;
     }
 
-        .introduccion_texto{
-            width: 90%;
+        .introduction_text{
+            width: 100%;
+        }
+        .introduction_photo{
+            min-width: 80%;
         }
 }

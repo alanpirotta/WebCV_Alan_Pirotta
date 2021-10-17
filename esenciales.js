@@ -1,15 +1,27 @@
-document.getElementById("header").innerHTML = `
-        <div>
-            <a id="logo" href="index.html"><h2>Alan Pirotta</h2></a>  <!--logo de mi nombre, más grande y a la izq-->
-        </div>
-        <nav>
-            <a class="nav pag_activa" href="index.html">SOBRE MI</a>
-            <a class="nav" href="conocimientos.html">CONOCIMIENTOS</a>
-            <a class="nav" href="experiencia_laboral.html">EXPERIENCIA LABORAL</a>
-            <a class="nav" href="contacto.html">CONTACTO</a>
-        </nav>
-        `
+var pag_1, pag_2, pag_3, pag_4;
 
+if (document.URL.includes("index.html")) {
+    pag_1 = "pag_activa";
+}else if(document.URL.includes("experiencia_laboral.html")){
+    pag_2 = "pag_activa";
+}else if(document.URL.includes("conocimientos.html")){
+    pag_3 = "pag_activa";
+}else{
+    pag_4 = "pag_activa";
+}
+
+document.getElementById("header").innerHTML=
+    `
+    <div>
+        <a id="logo" href="index.html"><h2>Alan Pirotta</h2></a>  <!--logo de mi nombre, más grande y a la izq-->
+    </div>
+        <nav>
+            <a class="nav ${pag_1}" href="index.html">SOBRE MI</a>
+            <a class="nav ${pag_2}" href="experiencia_laboral.html">EXPERIENCIA LABORAL</a>
+            <a class="nav ${pag_3}" href="conocimientos.html">CONOCIMIENTOS</a>
+            <a class="nav ${pag_4}" href="contacto.html">CONTACTO</a>
+        </nav>
+    `
 
 document.getElementById("footer").innerHTML = `
         <h3 class="footer_logo footer_start">
