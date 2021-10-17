@@ -851,8 +851,9 @@ footer{
         column-gap: 5px;
     }
     .footer_start{
-        font-size: medium;
+        font-size: small;
     }
+
     
     /*Cambiar ubicación de foto y texto introductorio a vertical*/
     .introduction{

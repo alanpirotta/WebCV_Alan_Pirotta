@@ -42,7 +42,7 @@ document.getElementById("footer").innerHTML = `
         <h4 class="footer_title footer_end">
             Sígueme
         </h4>
-        <h4 class="footer_title footer_start">
+        <h4 class="footer_title footer_start" id="date">
             Octubre 2021
         </h4>
         <a class="footer_link" href="https://wa.me/541159659368" target="_blank">(54)11 5965-9368</a>
