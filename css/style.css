@@ -834,7 +834,7 @@ footer{
             gap: 0;
             flex-direction: column;
             background-color: white;
-            width: 30%;
+            width: 50%;
             text-align: center;
             transition: 0.3s;
         }
