@@ -174,7 +174,7 @@ footer{
 
         /* tamaño de las cajas de introducción */
         .introduction_photo, .introduction_text{
-            height: 500px;
+            height: 520px;
             width: 350px;
         }
     
@@ -487,7 +487,7 @@ footer{
     }
 
     .content{
-        grid-template-rows: 25px 25px 1fr 3fr;
+        grid-template-rows: 40px 25px 1fr 3fr;
         align-items: center;
         row-gap: 5px;
         height: fit-content;
@@ -631,11 +631,11 @@ footer{
     }
 
         .excel{
-            width: 80%;
+            width: 90%;
         }
 
         .html, .css{
-            width: 25%;
+            width: 40%;
         }
         
         .java, .js{
