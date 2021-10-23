@@ -9,7 +9,7 @@ var validateName = function (e) {
     }
 };
     
-function validateMessage(e){
+var validateMessage = function (e){
     if(form.message.value == 0){
         alert("Escriba un mensaje");
         e.preventDefault();          
