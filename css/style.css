@@ -282,7 +282,7 @@ footer{
             border-color: rgb(100, 100, 241);
             border-width: 2px;
             height: 30px;
-            margin: 0 20px 20px 20px;
+            margin: 0 20px 20px 0px;
         }
         
         .contact_form input:focus, .contact_form textarea:focus{
@@ -961,12 +961,7 @@ footer{
         font-size: small;
     }
 
-    .contact_form-radio, .contact_form input[type="text"], .contact_form input[type="email"], .contact_form textarea{
-        margin-left: 0;
-
-    }
-
-    .contact_form input[type="text"], .contact_form input[type="email"], .contact_form textarea{
+    .contact_form input[type="text"], .contact_form input[type="email"]{
         height: 20px;
     }
 
