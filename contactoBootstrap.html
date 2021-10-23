@@ -1,3 +1,9 @@
+<!-- Para probar el formulario con bootstrap e iframe
+    cambiar nombre de este archivo a contacto.html (y cambiar a 
+    otro nombre el actual contacto.html)
+    Descomentar en css/style.css las líneas 361-370 y 910-914
+-->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,22 +23,9 @@
     </header>
     <section class="contact">
         <h2>Contáctame!</h2>
-    <form class="contact_form" id="contact_form" method="get">
-        <label for="name">Nombre y apellido:</label>
-        <label for="mail">Mail:</label>
-        <input type="text" id="name" name="name" >
-        <input type="email" id="mail" name="mail">
-        <label for="subject">Asunto:</label>
-        <label for="subject_type">Tema:</label>
-        <input type="text" id="subject" name="subject">
-        <div class="contact_form-radio">
-            <input type="radio" name="subject_type" id="work" checked><label for="work">laboral</label>
-            <input type="radio" name="subject_type" id="personal"><label for="personal">personal</label>
-        </div>
-        <label class="contact_form-message" for="message" id="textarea_title">Mensaje:</label>
-        <textarea class="contact_form-message" name="message" id="mensaje"></textarea>
-        <input class="contact_form-button" id="contact_form_button" type="submit">
-    </form>
+    <!-- <form class="contact_form" id="contact_form" method="get"> -->
+        <iframe id="contact_iframe" src="formularioBootstrap.html" frameborder="0"></iframe>
+    <!-- </form> -->
 
     <script src="validar_form.js">
     </script>
