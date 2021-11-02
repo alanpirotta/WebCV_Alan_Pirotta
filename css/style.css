@@ -10,7 +10,6 @@ h1, h2, h3, h4, h5{
 }
 
 body{
-    /*Se usa flex para ocupar el 100% del viewport*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
