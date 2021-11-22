@@ -50,6 +50,7 @@ document.getElementById("footer").innerHTML = `
         <div class="footer_link footer_end" id="social">
             <a href="https://www.linkedin.com/in/alan-uriel-pirotta/" class="fa fa-linkedin"  target="_blank"></a>
             <a href="https://github.com/alanpirotta" class="fa fa-github"  target="_blank"></a>
+            <a href="https://twitter.com/AlanPirotta" class="fa fa-twitter"  target="_blank"></a>
         </div>
         `
 

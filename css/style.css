@@ -477,14 +477,14 @@ footer{
     .container{
         padding: 5px 10px;
         height: 50%;
-        grid-template-columns: 30% 40% 5fr; 
+        grid-template-columns: 25% 20fr 5fr; 
         grid-template-rows: 100%;
     }
 
         .container_second{
             margin-top: 20px;
             padding: 10px;
-            grid-template-columns: 30% 25% 5fr 1fr;
+            grid-template-columns: 33% 23% 10fr 4fr;
         }
 
     /* Las experiencias en si mismas y los tipos de estudios*/
@@ -543,7 +543,7 @@ footer{
                 display: none;
             }
             
-            #responsable_area::after{
+            #responsable_area::after, #coordinador_sicon:after{
                 left: 10%;
             }
 
@@ -734,7 +734,6 @@ footer{
             .content::after {
                 bottom: 0%;
                 top: 70%;
-                left: -38px;
                 transform: rotate(-45deg);
             }
             
@@ -742,9 +741,10 @@ footer{
                 .content_second::after {
                     /* top: 0px; */
                     right: -53px;
+                    left: -40px;
                 }
     
-                #responsable_area::after{
+                #responsable_area::after, #coordinador_sicon:after{
                     left: -38px;
                     top: 10%;
                 }
