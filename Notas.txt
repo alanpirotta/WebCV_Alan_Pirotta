@@ -1,0 +1,17 @@
+Dirección donde está subida la página:
+https://goofy-jones-b9dda4.netlify.app/
+
+habilidades blandas:
+- Pensamiento crítico
+- Comunicación
+- Comprensión del negocio
+- Curiosidad
+- 
+
+
+Habilidades técnicas para data Science:
+- Recopilación y análisis de datos
+- estadística
+- interpretación de resultados
+- Servicios en la nube: Adicional, ver como aplicarlo
+
